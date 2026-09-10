@@ -1,0 +1,17 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1789040629
+::res://assets/::1788439851
+ComicoroRu_0.ttf::FontFile::6832027958800045667::1788437268::1788437269::1::::<><><>0<>0<>fd6021130488443cc538a1fe0295a82e<>res://.godot/imported/ComicoroRu_0.ttf-a4ffe206a1155ae61c2ab74494de4aff.fontdata::
+heart.png::CompressedTexture2D::3048445905329677837::1786137663::1788437480::1::::<><><>0<>0<>91046c19caeef5b090eac6841fcddbb6<>res://.godot/imported/heart.png-9a2fa56e49d8a002fed7c28ce07513e0.ctex::
+icon-2.png::CompressedTexture2D::6278551801512161094::1786138157::1788437480::1::::<><><>0<>0<>af9faf301e9e193d4d29dddf1a8d958b<>res://.godot/imported/icon-2.png-e0e879502da4b87d40f409f674b3b4ec.ctex::
+icon-3.png::CompressedTexture2D::957912939087196756::1786138163::1788437480::1::::<><><>0<>0<>fc9044723b653d77ee239dfda3ea7d7d<>res://.godot/imported/icon-3.png-b39d1708c9801c2069f5433e0ea80386.ctex::
+icon.png::CompressedTexture2D::1729517711383632336::1786133307::1788437480::1::::<><><>0<>0<>291a39641e1ef44f1ba5db1f8f3b8ed8<>res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex::
+icon.svg::CompressedTexture2D::7628725003459996199::1788253720::1788439851::1::::<><><>0<>0<>00448eaa2d9c32caae0637a0b18572e8<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
+sprite.png::CompressedTexture2D::155385076841593437::1786135927::1788437480::1::::<><><>0<>0<>6e213d6b0853dae1e70fa654f95968ed<>res://.godot/imported/sprite.png-326bf2a42cf01374c1682f27990021a3.ctex::
+::res://scenes/::1788859330
+main.tscn::PackedScene::1801702014382272189::1788439935::0::1::::<><><>0<>0<><>::uid://chjf07tbo3th::::res://assets/sprite.png<>uid://c4lqrcw1qmy4j::::res://assets/ComicoroRu_0.ttf<>uid://bqjqd4q1u3ojv::::res://script/main.gd<>uid://dgxn8sdbddrnb::::res://assets/icon.svg
+node_2d.tscn::PackedScene::2587505221446104290::1788254695::0::1::::<><><>0<>0<><>::
+rabota2.tscn::PackedScene::7715475032433000726::1788859329::0::1::::<><><>0<>0<><>::uid://c4lqrcw1qmy4j::::res://assets/ComicoroRu_0.ttf<>uid://nwaxlgug6vx1::::res://assets/icon-3.png<>uid://chjf07tbo3th::::res://assets/sprite.png
+rabota3.tscn::PackedScene::4053298561641829697::1788859330::0::1::::<><><>0<>0<><>::uid://c4lqrcw1qmy4j::::res://assets/ComicoroRu_0.ttf<>uid://chjf07tbo3th::::res://assets/sprite.png
+::res://script/::1788440041
+main.gd::GDScript::3528999960057324895::1788440041::0::1::::<>Control<><>0<>0<><>::

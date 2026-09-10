@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://dh6o0m88fl42e"]
+
+[ext_resource type="FontFile" uid="uid://c4lqrcw1qmy4j" path="res://assets/ComicoroRu_0.ttf" id="1_3a02y"]
+[ext_resource type="Texture2D" uid="uid://nwaxlgug6vx1" path="res://assets/icon-3.png" id="1_a4fca"]
+[ext_resource type="Texture2D" uid="uid://chjf07tbo3th" path="res://assets/sprite.png" id="2_3a02y"]
+[ext_resource type="Script" uid="uid://c4xwptad8wfmb" path="res://scenes/ui_info.gd" id="2_ndlb5"]
+
+[sub_resource type="Theme" id="Theme_xfcki"]
+default_font = ExtResource("1_3a02y")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv75t"]
+atlas = ExtResource("2_3a02y")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7rm7k"]
+texture = SubResource("AtlasTexture_qv75t")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="Theme" id="Theme_cdvjf"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_7rm7k")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdvjf"]
+atlas = ExtResource("2_3a02y")
+region = Rect2(33, 1, 32, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kesne"]
+atlas = ExtResource("2_3a02y")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjky6"]
+texture = SubResource("AtlasTexture_kesne")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaesw"]
+atlas = ExtResource("2_3a02y")
+region = Rect2(33, 16, 31, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5t8l"]
+atlas = ExtResource("2_3a02y")
+region = Rect2(27, 31, 40, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwv5p"]
+atlas = ExtResource("2_3a02y")
+region = Rect2(0, 46, 35, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugne0"]
+atlas = ExtResource("2_3a02y")
+region = Rect2(35, 46, 32, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll04x"]
+atlas = ExtResource("2_3a02y")
+region = Rect2(3, 19, 26, 27)
+
+[node name="Main" type="Control" unique_id=1758676319 node_paths=PackedStringArray("hearts_container", "time_label", "Name_label", "Lv_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_xfcki")
+script = ExtResource("2_ndlb5")
+hearts_container = NodePath("MarginContainer/VBoxContainer/UserHBoxContainer/VBoxContainer/HpFlowContainer")
+time_label = NodePath("MarginContainer/VBoxContainer/Stats/TimeBoxContainer/TimeLabel")
+Name_label = NodePath("MarginContainer/VBoxContainer/UserHBoxContainer/VBoxContainer/NameLabel")
+Lv_label = NodePath("MarginContainer/VBoxContainer/LvHBoxContainer/LvLabel")
+
+[node name="Background" type="ColorRect" parent="." unique_id=976485869]
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 132.0
+color = Color(0.4595917, 0.34286657, 0.3111, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=972390971]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.0295557, 1.0104766)
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1835496793]
+layout_mode = 2
+
+[node name="UserHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1495079613]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/UserHBoxContainer" unique_id=234768643]
+layout_mode = 2
+theme = SubResource("Theme_cdvjf")
+
+[node name="UserTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/UserHBoxContainer/PanelContainer" unique_id=951182475]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("1_a4fca")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/UserHBoxContainer" unique_id=649817445]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/UserHBoxContainer/VBoxContainer" unique_id=1070576990]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "lele"
+
+[node name="HpFlowContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/UserHBoxContainer/VBoxContainer" unique_id=191833993]
+layout_mode = 2
+
+[node name="LvHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1169338736]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="LvTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/LvHBoxContainer" unique_id=1944447432]
+custom_maximum_size = Vector2(80, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_cdvjf")
+
+[node name="LvLabel" type="Label" parent="MarginContainer/VBoxContainer/LvHBoxContainer" unique_id=1128640985]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "1"
+
+[node name="Stats" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1661737785]
+layout_mode = 2
+
+[node name="StatsPanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Stats" unique_id=577796815]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gjky6")
+
+[node name="StatsGridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer" unique_id=1891225647]
+layout_mode = 2
+columns = 2
+
+[node name="Hp" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer" unique_id=362599556]
+layout_mode = 2
+
+[node name="HpTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Hp" unique_id=557196229]
+layout_mode = 2
+texture = SubResource("AtlasTexture_uaesw")
+
+[node name="HpLabel" type="Label" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Hp" unique_id=2030760781]
+layout_mode = 2
+text = "5"
+
+[node name="Hov" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer" unique_id=1478877645]
+layout_mode = 2
+
+[node name="HovTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Hov" unique_id=91218816]
+layout_mode = 2
+texture = SubResource("AtlasTexture_c5t8l")
+
+[node name="HovLabel" type="Label" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Hov" unique_id=565407175]
+layout_mode = 2
+text = "5"
+
+[node name="Bag" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer" unique_id=2115877810]
+layout_mode = 2
+
+[node name="BagTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Bag" unique_id=621013016]
+layout_mode = 2
+texture = SubResource("AtlasTexture_dwv5p")
+
+[node name="5" type="Label" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Bag" unique_id=164631131]
+layout_mode = 2
+text = "5"
+
+[node name="Wg" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer" unique_id=1075345292]
+layout_mode = 2
+
+[node name="WgTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Wg" unique_id=1513187359]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ugne0")
+
+[node name="WgLabel" type="Label" parent="MarginContainer/VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Wg" unique_id=2069991663]
+layout_mode = 2
+text = "5"
+
+[node name="TimeBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Stats" unique_id=1982345919]
+layout_mode = 2
+
+[node name="TimeTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Stats/TimeBoxContainer" unique_id=1675976480]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = SubResource("AtlasTexture_ll04x")
+stretch_mode = 2
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/VBoxContainer/Stats/TimeBoxContainer" unique_id=1750650718]
+layout_mode = 2
+size_flags_vertical = 8
+text = "00:00"
